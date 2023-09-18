@@ -29,6 +29,11 @@ public class PlantController {
         return service.getPlant(name);
     }
 
+    @GetMapping("/plantpage/{id}")
+    public Optional<Plant> getPlant(@PathVariable Integer id){
+        return service.getPlantById(id);
+    }
+
     @GetMapping("/plant/{text}")
     public List<Plant> getPlantWithText(@PathVariable String text){
         return service.getPlantWithText(text);

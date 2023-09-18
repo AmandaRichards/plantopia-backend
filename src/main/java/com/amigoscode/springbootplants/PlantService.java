@@ -51,6 +51,18 @@ public class PlantService {
         return plants;
     }
 
+    public Optional<Plant> getPlantById(Integer id){
+        return db.findById(id);
+    }
+//    public Optional<Plant> getPlantById(Integer id){
+//        Optional<Plant> plant =  db.findById(id);
+//
+//           if(plant.isPresent()){
+//            return plant;
+//        }
+//
+//        return plant;
+//    }
     public void updatePlant(Integer id, Plant plant){
         Optional<Plant> plantUpdate =  db.findById(id);
 
